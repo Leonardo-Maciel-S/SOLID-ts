@@ -1,0 +1,2 @@
+
+const messaging = new Messaging();
