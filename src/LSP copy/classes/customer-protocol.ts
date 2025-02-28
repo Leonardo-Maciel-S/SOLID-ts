@@ -1,4 +1,4 @@
-export interface CustomerOrder {
+export interface ICustomerOrder {
 	getName(): string;
 	getIDN(): string;
 }

@@ -1,2 +1,0 @@
-
-const messaging = new Messaging();
