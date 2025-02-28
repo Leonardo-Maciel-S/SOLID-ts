@@ -12,7 +12,7 @@ Repositório para aprender princípios do S.O.L.I.D
 <h2 style='color:rgb(1, 228, 39);'>O = Open/closed Principle
 </h2>
 
-> "Aberto a extensão, porem fechado a alteração."
+> "Aberto para extensão, porem fechado para alteração."
 
 - Não é bom toda vez que alterar algo no sistema como o valor de desconto, eu tenha que sair mexendo em todo o lugar que chamei aquela função.
 - O Certo seria eu abstrair essa classe, assim toda vez que eu tenha que adicionar um desconto novo eu não mexa na estrutura do código já criado, apenas estendo em uma nova classe e passo ela como dependência.
@@ -22,7 +22,7 @@ Repositório para aprender princípios do S.O.L.I.D
 
 > "Um subtipo deve ser substituível por outro subtipo"
 
-- Suponhamos que eu tenha essa classe abstrata **Discount** eu tenha descontos fixo, como 50% por exemplo, nesse caso eu posso criar outra classe que extend essa.
+- Suponhamos que eu tenha essa classe abstrata **Discount** eu tenha descontos fixo, como 50% por exemplo, nesse caso eu posso criar outra classe que estende essa.
   ```ts
   export abstract class Discount {
     protected discount = 0
@@ -43,12 +43,12 @@ Repositório para aprender princípios do S.O.L.I.D
 
 - Esse princípio me diz que se caso eu passar meu Discount como dependência de uma classe, ela deve poder receber qualquer classe herdada de Discount sem que seu funcionamento mude a forma como deve ser, nesse caso, tem que me retornar o cálculo do desconto.
 - Se eu em algum momento alterar o tipo de retorno do meu método eu vou quebrar a aplicação.
-- No exemplo eu altero apenas a porcentagem do desconto, podem o método ainda funciona da mesma forma.
+- No exemplo, eu altero apenas a porcentagem do desconto, porem o método ainda funciona da mesma forma.
 
 <h2 style='color:rgb(1, 228, 39);'>I = Interface Segregation Principle
 </h2>
 
-> "Os clientes não devem ser forçamos a depender de uma interface, type ou métodos que não utilizam"
+> "Os clientes não devem ser forçados a depender de uma interface, type ou métodos que não utilizam"
 
 - Imagine que temos duas classes, **IndividualCostumer** e **EnterpriseCostumer**, por ser ambos costumer você pode ser tentado a criar uma interface **Costumer** e colocar em ambos porem essa estratégia não seria a melhor.
   ```ts
