@@ -1,16 +1,13 @@
 # SOLID-ts
 Repositório para aprender princípios do S.O.L.I.D
 
-<h2 style='color:rgb(1, 228, 39);'>S = Single Responsibility Principle
-</h2>
+## S = Single Responsibility Principle
 
 > "Uma classe, método, módulo devem ter apenas uma responsabilidade".
 
 - Não é bom que eu tenha uma classe **Carrinho** e ela tenha métodos de finalizar pedido, para isso eu teria que ter uma classe **Compra** por exemplo.
 
-
-<h2 style='color:rgb(1, 228, 39);'>O = Open/closed Principle
-</h2>
+## O = Open/closed Principle
 
 > "Aberto para extensão, porem fechado para alteração."
 
@@ -45,8 +42,7 @@ Repositório para aprender princípios do S.O.L.I.D
 - Se eu em algum momento alterar o tipo de retorno do meu método eu vou quebrar a aplicação.
 - No exemplo, eu altero apenas a porcentagem do desconto, porem o método ainda funciona da mesma forma.
 
-<h2 style='color:rgb(1, 228, 39);'>I = Interface Segregation Principle
-</h2>
+## I = Interface Segregation Principle
 
 > "Os clientes não devem ser forçados a depender de uma interface, type ou métodos que não utilizam"
 
@@ -63,6 +59,7 @@ Repositório para aprender princípios do S.O.L.I.D
 - Então esse princípio nos ensina a separar bem essas obrigatoriedade quando for criar interface, tipos e classes abstratas.
 
 
+## D = Dependency Inversion Principle
 
-<h2 style='color:rgb(1, 228, 39);'>
-</h2>
+- Módulos de Alto nível não devem depender de módulos de baixo nível, ambos devem depender de abstrações.
+- Ou seja, não podemos depender de classes concretas, mas sim de interfaces.
